@@ -4,7 +4,7 @@
 
 Semi-supervised few-shot classification aims to recognize unseen samples within the same classes in the support set by only a few labeled samples and rich unlabeled samples. A heuristic solution is to generate pseudo labels for those unlabeled samples, however, previous methods fail to generate high-quality pseudo labels and class prototype representations. To handle the drawbacks, this paper proposes the **U**ncertainty **E**stimation with **S**elf-**D**istillation (UESD) approach for semi-supervised few-shot classification. It adopts an uncertainty estimation criterion to compute the confidence scores of pseudo-labels based on the probability entropy of neighbouring samples. This reduces the influences of those pseudo-labeled samples with lower confidence. Simultaneously, it introduces a masked self-distillation strategy to train a better model, by adding mask occlusions to a few labeled samples in the support set. This encourages the model to learn better class prototype representations under the guidance of self-distillation knowledge. Experimental results on three benchmarks including mini-ImageNet, tiered-ImageNet, and CUB-200-2011 demonstrate the superiority of the proposed method.
 
-![Network](assets/Network.png)
+![Network](assets/Network.png) [Paper](https://www.sciencedirect.com/science/article/abs/pii/S0950705125009931)
 
 ## Install requirements
 
@@ -96,13 +96,14 @@ python testit.py cfgs/ssl_large_miniimagenet-wrn-1.json logs/finetune/miniimagen
 ## Citation
 
 ```
-@article{li-arxiv2025-uesd_semifewshot,
+@article{li-kbs2025-uesd_semifewshot,
   author    = {Jiajun Chen, Ping Li, Renshu Gu},
   title     = {Uncertainty estimation with self-distillation for semi-supervised few-shot classification},
-  journal   = {},
-  volume    = {},
-  pages     = {},
-  year      = {2025}
+  journal   = {Knowledge-Based Systems (KBS)},
+  volume    = {325},
+  pages     = {113948},
+  year      = {2025},
+  doi       = {https://doi.org/10.1016/j.knosys.2025.113948}
 }
 ```
 
